@@ -25,13 +25,27 @@ To simulate the decommissioning process:
 - The swizzled method disables the original functionality and logs a deprecation message instead of fetching data.
 
 ### 4. **Running the Project**
-1. Build and run the project in Xcode.
-2. Observe the embedded `UserInterfaceController` within the SwiftUI app.
-3. Check the console to see the deprecation message, which simulates the decommissioning of the API call.
+1. **Build and Run**: Build and run the project in Xcode.
+2. **Observe UI**: Observe the embedded `UserInterfaceController` within the SwiftUI app.
+3. **Check Console**: Check the console to see the deprecation message, which simulates the decommissioning of the API call.
 
-## Learning Outcomes
-This project provides hands-on experience with:
-- Integrating legacy Objective-C code with modern SwiftUI.
-- Using method swizzling for decommissioning purposes.
-- Structuring an iOS project to accommodate both legacy and modern components.
-- Documenting and managing the decommissioning process in a compliant manner.
+## Data Management Scripts
+
+As part of the decommissioning process, two scripts have been created to simulate the backup and deletion of user data.
+
+### `data_backup.sh`
+
+This script simulates the process of backing up user data to a specified directory.
+
+#### Usage:
+1. Open a terminal window.
+2. Navigate to the `Scripts` directory.
+3. Make the script executable by running:
+   ```bash
+   chmod +x data_backup.sh
+4. Run the script:
+   ```bash
+   ./data_backup.sh
+   
+You can follow the same process for the data deletion.
+
