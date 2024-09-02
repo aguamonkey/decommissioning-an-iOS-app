@@ -4,13 +4,19 @@
 
 When decommissioning an app, it is critical to ensure compliance with relevant data protection regulations, such as the General Data Protection Regulation (GDPR) in the European Union. This document outlines the compliance strategies that should be followed during the decommissioning process.
 
-## 1. **Data Retention and Deletion**
+### 1. **Data Retention and Deletion**
 
-### Backup Process
-Before decommissioning, it is essential to securely back up all user data to prevent data loss. This project includes a script (`data_backup.sh`) that simulates the backup process. The script copies the relevant data to a secure location for potential future use.
+#### Backup Process
+Before decommissioning, securely back up all user data to prevent data loss. The `data_backup.sh` script provided in this project simulates this process by copying data to a secure location.
 
-### Data Deletion
-Once the decommissioning process begins, all user data that is no longer needed must be securely deleted to comply with GDPR and other data protection laws. The project includes a `data_deletion.sh` script that simulates the secure deletion of user data.
+#### Data Deletion
+All user data that is no longer needed must be securely deleted to comply with data protection laws. The `data_deletion.sh` script simulates the secure deletion of user data.
+
+#### Feature Flagging
+Feature flagging, as demonstrated in `FeatureManager.swift`, should be used to gradually phase out features before complete decommissioning. This allows users to adjust to the changes over time and ensures a smoother transition.
+
+#### Deprecation Warnings
+Use deprecation warnings, as demonstrated in `ModernApiManager.swift`, to notify developers and users that certain functionalities will be removed in the future. This proactive approach helps manage expectations and reduces the risk of disruption.
 
 ### Ensuring Data Deletion Compliance
 - **Irretrievability**: The data deletion process must ensure that deleted data cannot be recovered by unauthorized parties.
@@ -42,6 +48,9 @@ After the app has been decommissioned, a final report should be generated that d
 - The steps taken during the decommissioning process.
 - The compliance measures implemented.
 - Confirmation that all user data has been securely deleted or archived according to the retention policy.
+- The status of deprecated methods and features.
+- A record of feature flags used to manage the transition.
+- The timeline and steps taken for API version transitions, as demonstrated in `VersionedApiManager.swift`.
 
 This report should be retained for audit purposes and to demonstrate compliance with relevant regulations.
 
